@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_project_app/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter_project_app/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
 import 'package:iconsax/iconsax.dart';
-
+import 'package:get/get.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_strings.dart';
