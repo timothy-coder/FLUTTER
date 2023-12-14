@@ -4,7 +4,7 @@
 
     static const String onBoardingTitle1="Choose your product";
     static const String onBoardingTitle2="Select Payment";
-    static const String onBoardingTitle3="deliver";
+    static const String onBoardingTitle3="mauricio";
 
     static const String onBoardingSubTitle1="Bienvenido en un mundo de cambios";
     static const String onBoardingSubTitle2="Para otros cambios";
