@@ -34,6 +34,7 @@
     static const String resendEmail="resend Email";
     static const String resendEmailIn="resend Email In";
     static const String and="and";
+    static const String done="Done!!";
 
     static const String loginTitle="Welcome Back";
     static const String loginSubTitle="El mejor catalogo de productos";
