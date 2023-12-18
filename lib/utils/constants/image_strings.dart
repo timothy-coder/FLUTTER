@@ -23,4 +23,9 @@ class TImages{
   static const String forthcategory="assets/icons/category/category4.jpg";
   static const String fifthcategory="assets/icons/category/category5.jpg";
   static const String sexthcategory="assets/icons/category/category6.jpg";
+
+  static const String promoBanner1="assets/images/banners/promo-banner-1.png";
+  static const String promoBanner2="assets/images/banners/promo-banner-2.png";
+  static const String promoBanner3="assets/images/banners/promo-banner-3.png";
+
 }
