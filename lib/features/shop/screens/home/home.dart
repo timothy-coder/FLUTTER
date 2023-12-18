@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_app/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:flutter_project_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/promo_slider.dart';
@@ -17,11 +18,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const TPrimaryHeaderContainer(
+            TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///AppBar
@@ -51,8 +52,14 @@ class HomeScreen extends StatelessWidget {
 
             /// Body -- Tutorial [Section #3, video #5]
             Padding(
-              padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],)
+              padding: EdgeInsets.all(TSizes.defaultSpace),
+              child: Column(
+                children: [
+                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
+
+                  TProductCardVertical(),
+                ],
+              )
             ),
           ],
         ),
