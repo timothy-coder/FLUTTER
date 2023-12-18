@@ -16,4 +16,11 @@ class TImages{
   static const String quinto="assets/images/animations/ventas4.png";
   static const String sexto="assets/images/animations/ventas5.png";
   static const String septimo="assets/images/animations/ventas6.png";
+
+  static const String firstcategory="assets/icons/category/category1.jpg";
+  static const String secondcategory="assets/icons/category/category2.jpg";
+  static const String thirdcategory="assets/icons/category/category3.jpg";
+  static const String forthcategory="assets/icons/category/category4.jpg";
+  static const String fifthcategory="assets/icons/category/category5.jpg";
+  static const String sexthcategory="assets/icons/category/category6.jpg";
 }
