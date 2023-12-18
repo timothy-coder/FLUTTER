@@ -18,7 +18,7 @@ class TPromoSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(HomeController())
+    final controller = Get.put(HomeController());
     return Column(
       children: [
         CarouselSlider(
