@@ -43,6 +43,6 @@ class TCircularImage extends StatelessWidget {
       ),
 
 
-    )
+    );
   }
 }
