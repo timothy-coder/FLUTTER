@@ -5,19 +5,9 @@ import 'package:flutter_project_app/utils/constants/image_strings.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
 import 'package:flutter_project_app/utils/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../styles/shadows.dart';
 import '../../custom_shapes/containers/rounded_container.dart';
 import '../../icons/t_circular_icon.dart';
-
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_project_app/common/widgets/images/t_rounded_image.dart';
-import 'package:flutter_project_app/utils/constants/colors.dart';
-import 'package:flutter_project_app/utils/helpers/helper_functions.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../../styles/shadows.dart';
-import '../../custom_shapes/containers/rounded_container.dart';
 import '../../texts/product_price_text.dart';
 import '../../texts/product_title_text.dart';
 
