@@ -21,11 +21,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///AppBar
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
 
             /// Body -- Tutorial [Section #3, video #5]
             Padding(
-              padding: EdgeInsets.all(TSizes.defaultSpace),
+              padding: const EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
                   /// -- Promo Slider -- Tutorial [Section #3, Video #6]
