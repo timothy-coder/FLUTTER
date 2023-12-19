@@ -1,101 +1,36 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_project_app/common/widgets/appbar/appbar.dart';
-import 'package:flutter_project_app/common/widgets/appbar/tabbar.dart';
-import 'package:flutter_project_app/common/widgets/brands/brand_card.dart';
-import 'package:flutter_project_app/common/widgets/custom_shapes/containers/rounded_container.dart';
-import 'package:flutter_project_app/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
-import 'package:flutter_project_app/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:flutter_project_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_project_app/common/widgets/texts/section_heading.dart';
-import 'package:flutter_project_app/utils/constants/colors.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
-import 'package:flutter_project_app/utils/helpers/helper_functions.dart';
-class StoreScreen extends StatelessWidget {
-  const StoreScreen({super.key});
+
+import '../../../../../common/widgets/brands/brand_show_case.dart';
+import '../../../../../utils/constants/image_strings.dart';
+class TCategoryTab extends StatelessWidget {
+  const TCategoryTab({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 5,
-      child: Scaffold(
-        appBar: TAppBar(
-          title: Text('Store',style: Theme.of(context).textTheme.headlineMedium),
-          actions: [TCartCounterIcon(onPressed: (){})],
-        ),
-        body: NestedScrollView(
-          headerSliverBuilder: (_,innerBoxIsScrolled){
-            return[
-              SliverAppBar(
-                pinned: true,
-                floating: true,
-                expandedHeight: 440,
-                automaticallyImplyLeading: false,
-                backgroundColor: THelperFunctions.isDarkMode(context) ? TColors.black:TColors.white,
-                flexibleSpace: Padding(
-                  padding: const EdgeInsets.all(TSizes.defaultSpace),
-                  child: ListView(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    children: [
-                      const SizedBox(height: TSizes.spaceBtwItems),
-                      const TSearchContainer(
-                          text: 'Search in Store',
-                          showBorder: true,
-                          showBackground: false,
-                      ),
-                      const SizedBox(height: TSizes.spaceBtwSections),
-                      
-                      TSectionHeading(title: 'Marcas',onPressed: (){},),
-                      const SizedBox(height: TSizes.spaceBtwItems/1.5),
-
-                      TGridLayout(
-                          itemCount: 4,
-                          mainAxisExtent: 80,
-                          itemBuilder: (_,index){
-                            return const TBrandCard(showBorder:false);
-                          },
-                      ),
-                    ],
-                  ),
-                ),
-                bottom: const TTabBar(
-                  tabs: [
-                    Tab(child: Text('Farmacias')),
-                    Tab(child: Text('Farmacias')),
-                    Tab(child: Text('Farmacias')),
-                    Tab(child: Text('Farmacias')),
-                    Tab(child: Text('Farmacias')),
-                  ],
-                )
-              ),
-            ];
-          }, body: TabBarView(
+    return ListView(
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
+          child: Column(
             children: [
-              Padding(
-                  padding: const EdgeInsets.all(TSizes.defaultSpace),
-                child: Column(
-                  children: [
-                    ///Brands
-                    TRoundedContainer(
-                      showBorder: true,
-                      borderColor: TColors.darkGrey,
-                      backgroundColor: Colors.transparent,
-                      margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
-                      child: Column(
-                        children: [
-                          const TBrandCard(showBorder: true),
-                          Row()
-                        ],
-                      ),
-                    )
-                    ///Products
-                  ],
-                ),
-              )
-        ]),
+              ///Brands
+              const TBrandShowcase(images: [TImages.producto1,TImages.producto1,TImages.producto1]),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              ///Products
+              TSectionHeading(title: 'Favoritas',showActionButton: true,onPressed: () {}),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              TGridLayout(itemCount: 4, itemBuilder: (_,index)=>const TProductCardVertical()),
+              const SizedBox(height: TSizes.spaceBtwSections),
+            ],
+          ),
         ),
-        
-      ),
+      ]
     );
   }
 }
