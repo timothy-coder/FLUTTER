@@ -55,6 +55,7 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
+<<<<<<< Updated upstream
                   TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
                   SizedBox(height: TSizes.spaceBtwSections),
 
@@ -63,6 +64,17 @@ class HomeScreen extends StatelessWidget {
               )
             ),
           ],
+=======
+                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
+                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
+                  SizedBox(height: TSizes.spaceBtwSections),
+                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
+                  TProductCardVertical(),
+                ],
+              ),
+           ),
+         ],
+>>>>>>> Stashed changes
         ),
       ),
     );
