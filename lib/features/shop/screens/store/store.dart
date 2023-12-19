@@ -4,16 +4,18 @@ import 'package:flutter_project_app/common/widgets/appbar/tabbar.dart';
 import 'package:flutter_project_app/common/widgets/brands/brand_card.dart';
 import 'package:flutter_project_app/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:flutter_project_app/common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:flutter_project_app/common/widgets/images/t_circular_image.dart';
 import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_project_app/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:flutter_project_app/common/widgets/texts/section_heading.dart';
+import 'package:flutter_project_app/common/widgets/texts/t_brand_title_text_with_verified_icon.dart';
 import 'package:flutter_project_app/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:flutter_project_app/utils/constants/colors.dart';
+import 'package:flutter_project_app/utils/constants/enums.dart';
 import 'package:flutter_project_app/utils/constants/image_strings.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
 import 'package:flutter_project_app/utils/helpers/helper_functions.dart';
 
-import '../../../../common/widgets/brands/brand_show_case.dart';
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
 
@@ -46,11 +48,50 @@ class StoreScreen extends StatelessWidget {
                           text: 'Search in Store',
                           showBorder: true,
                           showBackground: false,
+                          padding: EdgeInsets.zero,
                         ),
                         const SizedBox(height: TSizes.spaceBtwSections),
 
                         TSectionHeading(title: 'Marcas',onPressed: (){},),
                         const SizedBox(height: TSizes.spaceBtwItems/1.5),
+
+                        GestureDetector(
+                          child: TRoundedContainer(
+                            padding: const EdgeInsets.all(TSizes.sm),
+                            showBorder: true,
+                            backgroundColor: Colors.transparent,
+                            child: Row(
+                              children: [
+                                /// -- Icon
+                                Flexible(
+                                  child: TCircularImage(
+                                    isNetworkImage: false,
+                                    image: TImages.cuarto,
+                                    backgroundColor: Colors.transparent,
+                                    overlayColor: THelperFunctions.isDarkMode(context) ? TColors.white : TColors.black,
+                                  ),
+                                ),
+                                const SizedBox(width: TSizes.spaceBtwItems/2),
+
+                                ///Text
+                                 Expanded(
+                                   child: Column(
+                                     mainAxisSize: MainAxisSize.min,
+                                     crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const TBrandTitleTextWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.large),
+                                      Text(
+                                          '256 products',
+                                      overflow: TextOverflow.ellipsis,
+                                      style: Theme.of(context).textTheme.labelMedium,),
+
+                                    ],
+                                ),
+                                 )
+                              ],
+                            ),
+                          ),
+                        ),
 
                         TGridLayout(
                           itemCount: 4,
@@ -58,7 +99,7 @@ class StoreScreen extends StatelessWidget {
                           itemBuilder: (_,index){
                             return const TBrandCard(showBorder:false);
                           },
-                        ),
+                        )
                       ],
                     ),
                   ),
