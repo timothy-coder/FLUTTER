@@ -28,4 +28,6 @@ class TImages{
   static const String promoBanner2="assets/images/banners/promo-banner-2.png";
   static const String promoBanner3="assets/images/banners/promo-banner-3.png";
 
+  static const String producto1="assets/images/products/paracetamol.png";
+
 }

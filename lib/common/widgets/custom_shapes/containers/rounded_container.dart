@@ -27,6 +27,17 @@ class TRoundedContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Container(
+      width: width,
+      height: height,
+      padding: padding,
+      margin: margin,
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(radius),
+        border: showBorder ? Border.all(color: borderColor):null,
+      ),
+      child: child,
+    );
   }
 }
