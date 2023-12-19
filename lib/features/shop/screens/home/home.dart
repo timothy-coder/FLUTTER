@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_project_app/common/widgets/custom_shapes/containers/circular_container.dart';
+import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_project_app/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:flutter_project_app/common/widgets/texts/product_title_text.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/promo_slider.dart';
@@ -8,13 +10,14 @@ import 'package:flutter_project_app/utils/constants/colors.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/image_strings.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super (key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -55,26 +58,16 @@ class HomeScreen extends StatelessWidget {
               padding: EdgeInsets.all(TSizes.defaultSpace),
               child: Column(
                 children: [
-<<<<<<< Updated upstream
-                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3],),
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
+                  const TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
+                  const SizedBox(height: TSizes.spaceBtwSections),
 
-                  TProductCardVertical(),
-                ],
-              )
-            ),
-          ],
-=======
-                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
-                  TPromoSlider(banners: [TImages.promoBanner1, TImages.promoBanner2, TImages.promoBanner3]),
-                  SizedBox(height: TSizes.spaceBtwSections),
-                  /// -- Promo Slider -- Tutorial [Section #3, Video #6]
-                  TProductCardVertical(),
+                  /// -- Promo Slider -- Tutorial [Section #3, Video #7]
+                  TGridLayout(itemCount: 2, itemBuilder: (_, index) => const TProductCardVertical())
                 ],
               ),
-           ),
-         ],
->>>>>>> Stashed changes
+            ),
+          ],
         ),
       ),
     );
