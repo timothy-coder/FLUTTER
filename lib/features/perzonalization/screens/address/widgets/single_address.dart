@@ -46,8 +46,7 @@ class TSingleAddress extends StatelessWidget {
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.titleLarge,
               ),
-              const SizedBox(height: TSizes.sm,
-              )
+              const SizedBox(height: TSizes.sm/2),
             ],
           )
         ],
