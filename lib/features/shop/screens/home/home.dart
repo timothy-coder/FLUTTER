@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///  -- Heading
-                  TSectionHeading(title: 'Popular Products'),
+                  const TSectionHeading(title: 'Popular Products'),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   /// -- Promo Slider -- Tutorial [Section #3, Video #7]
