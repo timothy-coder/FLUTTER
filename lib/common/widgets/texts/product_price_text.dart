@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class TProductPriceText extends StatelessWidget {
   const TProductPriceText({
     super.key,
-    this.currencySign = '\$',
+    this.currencySign = 'S/.',
     required this.price,
     this.isLarge = false,
     this.maxLines = 1,
