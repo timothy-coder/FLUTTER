@@ -26,14 +26,30 @@ class TSingleAddress extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: TSizes.spaceBtwItems),
       child: Stack(
         children: [
-          Icon(
-            selectedAddress ? Iconsax.tick_circle5 : null,
-            color: selectedAddress
-                ? dark
-                  ? TColors.light
-                  : TColors.dark
-                :null,
+          Positioned(
+            right: 5,
+            top: 0,
+            child: Icon(
+              selectedAddress ? Iconsax.tick_circle5 : null,
+              color: selectedAddress
+                  ? dark
+                    ? TColors.light
+                    : TColors.dark
+                  :null,
+            ),
           ),
+          Column(
+            children: [
+              Text(
+                  '8234 Timy',
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              const SizedBox(height: TSizes.sm,
+              )
+            ],
+          )
         ],
       ),
     );
