@@ -21,7 +21,6 @@ class TProductCardHorizontal extends StatelessWidget {
         width: 310,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-        boxShadow: [TShadowStyle.verticalProductShadow],
         borderRadius: BorderRadius.circular(TSizes.productImageRadius),
         color: dark ? TColors.darkerGrey : TColors.white,
         ),
@@ -64,12 +63,11 @@ class TProductCardHorizontal extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Spacer(),
+                  Spacer(),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Flexible(child: TProductPriceText(price: '30.00')),
-
 
                     ],
                   )

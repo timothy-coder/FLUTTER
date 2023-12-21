@@ -25,7 +25,7 @@ class StoreScreen extends StatelessWidget {
       length: 5,
       child: Scaffold(
         appBar: TAppBar(
-          title: Text('Store',style: Theme.of(context).textTheme.headlineMedium),
+          title: Text('Catalogo',style: Theme.of(context).textTheme.headlineMedium),
           actions: [TCartCounterIcon(onPressed: (){})],
         ),
         body: NestedScrollView(
@@ -45,14 +45,14 @@ class StoreScreen extends StatelessWidget {
                       children: [
                         const SizedBox(height: TSizes.spaceBtwItems),
                         const TSearchContainer(
-                          text: 'Search in Store',
+                          text: 'Busca en el Catalogo',
                           showBorder: true,
                           showBackground: false,
                           padding: EdgeInsets.zero,
                         ),
                         const SizedBox(height: TSizes.spaceBtwSections),
 
-                        TSectionHeading(title: 'Marcas',onPressed: (){},),
+                        TSectionHeading(title: 'Laboratorios',onPressed: (){},),
                         const SizedBox(height: TSizes.spaceBtwItems/1.5),
 
                         GestureDetector(
@@ -79,7 +79,7 @@ class StoreScreen extends StatelessWidget {
                                      mainAxisSize: MainAxisSize.min,
                                      crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
-                                      const TBrandTitleTextWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.large),
+                                      const TBrandTitleTextWithVerifiedIcon(title: 'Genfar', brandTextSize: TextSizes.large),
                                       Text(
                                           '256 products',
                                       overflow: TextOverflow.ellipsis,
@@ -106,10 +106,10 @@ class StoreScreen extends StatelessWidget {
                   bottom: const TTabBar(
                     tabs: [
                       Tab(child: Text('Farmacias')),
-                      Tab(child: Text('Farmacias')),
-                      Tab(child: Text('Farmacias')),
-                      Tab(child: Text('Farmacias')),
-                      Tab(child: Text('Farmacias')),
+                      Tab(child: Text('Laboratorios')),
+                      Tab(child: Text('Medicamentos')),
+                      Tab(child: Text('Categorias')),
+                      Tab(child: Text('Tipos')),
                     ],
                   )
               ),

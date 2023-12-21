@@ -2,11 +2,11 @@
     static const String tContinue="Continue";
     static const String appNombre="Lastmen";
 
-    static const String onBoardingTitle1="Choose your product";
-    static const String onBoardingTitle2="Select Payment";
-    static const String onBoardingTitle3="mauricio";
+    static const String onBoardingTitle1="Escoge tu producto";
+    static const String onBoardingTitle2="Visita tu catalogo";
+    static const String onBoardingTitle3="Mejores promociones";
 
-    static const String onBoardingSubTitle1="Bienvenido en un mundo de cambios";
+    static const String onBoardingSubTitle1="Bienvenido a un mundo de cambios";
     static const String onBoardingSubTitle2="Para otros cambios";
     static const String onBoardingSubTitle3="Escoga lo mejor para usted";
 
@@ -15,8 +15,8 @@
 
     static const String firstName="First Name";
     static const String lastName="Last Name";
-    static const String email="Email";
-    static const String password="Password";
+    static const String email="Correo";
+    static const String password="Contraseña";
     static const String newPassword="New Password";
     static const String username="UserName";
     static const String submit="Submit";
@@ -36,9 +36,9 @@
     static const String and="and";
     static const String done="Done!!";
 
-    static const String loginTitle="Welcome Back";
+    static const String loginTitle="Bienvenido al mejor catalogo del mundo";
     static const String loginSubTitle="El mejor catalogo de productos";
-    static const String signUpTitle="Welcome";
+    static const String signUpTitle="Bienvenido";
     static const String forgetPasswordTitle="Welcome";
     static const String forgetPasswordSubTitle="Welcome";
     static const String changeYourPasswordTitle="Welcome";

@@ -73,9 +73,9 @@ class TProductCardVertical extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TProductTitleText(title: 'Green Nike Air Shoes', smallSize: true),
+                    TProductTitleText(title: 'Paracetamol', smallSize: true),
                     SizedBox(height: TSizes.spaceBtwItems / 2),
-                    TBrandTitleTextWithVerifiedIcon(title: 'Nike'),
+                    TBrandTitleTextWithVerifiedIcon(title: 'Genfar'),
                   ],
                 ),
             ),
@@ -92,21 +92,7 @@ class TProductCardVertical extends StatelessWidget {
                   child: TProductPriceText(price: '35.0', isLarge: true),
                 ),
 
-                /// Add to Card Button
-                Container(
-                  decoration: const BoxDecoration(
-                    color: TColors.dark,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(TSizes.cardRadiusMd),
-                      bottomRight: Radius.circular(TSizes.productImageRadius),
-                    ),
-                  ),
-                  child: const SizedBox(
-                    width: TSizes.iconLg * 1.2,
-                    height: TSizes.iconLg * 1.2,
-                    child: Center(child: Icon(Iconsax.add, color: TColors.white)),
-                  ),
-                ),
+
               ],
             ),
           ],

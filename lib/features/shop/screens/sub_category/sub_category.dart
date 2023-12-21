@@ -27,9 +27,14 @@ class SubCategoriasScreen extends StatelessWidget {
                   TSectionHeading(title: 'Genfar',onPressed: (){},),
                   const SizedBox(height: TSizes.spaceBtwItems/2),
 
-                  ListView.builder(
-                      itemCount: 6,
-                      itemBuilder:(context,index) =>const TProductCardHorizontal()
+                  SizedBox(
+                    height: 120,
+                    child: ListView.separated(
+                        itemCount: 4,
+                        scrollDirection: Axis.horizontal,
+                        separatorBuilder: (context,index)=>const SizedBox(width: TSizes.spaceBtwItems,),
+                        itemBuilder:(context,index) =>const TProductCardHorizontal(),
+                    ),
                   ),
                 ],
               )

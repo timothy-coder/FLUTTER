@@ -49,33 +49,28 @@ class SettingsScreen extends StatelessWidget {
                       title: 'Mi cuenta',
                       subtitle: 'Set',
                       onTap: ()=>Get.to(()=> const UserAddressScreen()),),
-                    const TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'Mi carrito', subtitle: 'Set'),
-                    const TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'Mi orden', subtitle: 'Set'),
-                    const TSettingsMenuTile(icon: Iconsax.bank, title: 'Cuenta de Banco', subtitle: 'Set'),
+                    //const TSettingsMenuTile(icon: Iconsax.shopping_cart, title: 'Mi carrito', subtitle: 'Set'),
+                    //const TSettingsMenuTile(icon: Iconsax.bag_tick, title: 'Mi orden', subtitle: 'Set'),
+                    //const TSettingsMenuTile(icon: Iconsax.bank, title: 'Cuenta de Banco', subtitle: 'Set'),
                     const TSettingsMenuTile(icon: Iconsax.discount_shape, title: 'Cupones', subtitle: 'Set'),
                     const TSettingsMenuTile(icon: Iconsax.notification, title: 'Notificaciones', subtitle: 'Set'),
-                    const TSettingsMenuTile(icon: Iconsax.security_card, title: 'Privacidad de Cuenta', subtitle: 'Set'),
+                    //const TSettingsMenuTile(icon: Iconsax.security_card, title: 'Privacidad de Cuenta', subtitle: 'Set'),
 
                     const SizedBox(height: TSizes.spaceBtwSections),
                     const TSectionHeading(title: 'App Configuracion',showActionButton: false),
                     const SizedBox(height: TSizes.spaceBtwItems),
                     const TSettingsMenuTile(icon: Iconsax.document_upload, title: 'Cargar Datos', subtitle: 'Subir datos'),
-                    TSettingsMenuTile(
-                      icon: Iconsax.location,
-                      title: 'GeoLocation',
-                      subtitle: 'subtitle',
-                      trailing: Switch(value: true, onChanged: (value) {}),
-                    ),
+
                     TSettingsMenuTile(
                         icon: Iconsax.security_user,
-                        title: 'Safe Mode',
-                        subtitle: 'subtitle',
+                        title: 'Modo Seguro',
+                        subtitle: 'Seguridad',
                         trailing: Switch(value: false, onChanged: (value) {})
                     ),
                     TSettingsMenuTile(
                         icon: Iconsax.image,
-                        title: 'HD Image',
-                        subtitle: 'subtitle',
+                        title: 'Imagen en HD',
+                        subtitle: 'Vista',
                         trailing: Switch(value: false, onChanged: (value) {})
                     ),
                   ],

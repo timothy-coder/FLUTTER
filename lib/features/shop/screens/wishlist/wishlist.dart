@@ -14,7 +14,7 @@ class FavouriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: TAppBar(
-        title: Text('Wishlist',style: Theme.of(context).textTheme.headlineMedium,),
+        title: Text('Favoritos',style: Theme.of(context).textTheme.headlineMedium,),
         actions: [
           TCircularIcon(icon: Iconsax.add, onPressed: ()=>Get.to(const HomeScreen()),),
         ],
