@@ -17,6 +17,7 @@ class TSingleAddress extends StatelessWidget {
     return TRoundedContainer(
       width: double.infinity,
       showBorder: true,
+      padding: const EdgeInsets.all(TSizes.md),
       backgroundColor: selectedAddress ? TColors.primary.withOpacity(0.5) : Colors.transparent,
       borderColor: selectedAddress
           ? Colors.transparent
@@ -39,6 +40,7 @@ class TSingleAddress extends StatelessWidget {
             ),
           ),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                   '8234 Timy',
@@ -47,6 +49,9 @@ class TSingleAddress extends StatelessWidget {
                 style: Theme.of(context).textTheme.titleLarge,
               ),
               const SizedBox(height: TSizes.sm/2),
+              const Text('987654321',maxLines: 1,overflow: TextOverflow.ellipsis,),
+              const SizedBox(height: TSizes.sm/2),
+              const Text('av geranios',softWrap: true,),
             ],
           )
         ],

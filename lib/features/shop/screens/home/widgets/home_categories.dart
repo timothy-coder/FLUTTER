@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_app/features/shop/screens/sub_category/sub_category.dart';
+import 'package:get/get.dart';
 
 import '../../../../../common/widgets/images_text_widget/vertical_image_text.dart';
 import '../../../../../utils/constants/image_strings.dart';
@@ -19,8 +21,8 @@ class THomeCategories extends StatelessWidget {
         itemBuilder: (_,index) {
           return TVerticalImageText(
             image: TImages.firstcategory,
-            title: 'Antibioticos',
-            onTap: (){},
+            title: 'Laboratorios',
+            onTap: ()=>Get.to(()=>const SubCategoriasScreen()),
           );
         },
       ),
