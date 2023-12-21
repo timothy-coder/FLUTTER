@@ -52,17 +52,23 @@ class TProductCardHorizontal extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.only(top: TSizes.sm,left: TSizes.sm),
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        TProductTitleText(title: 'Paracetamol',smallSize: true,),
-                        SizedBox(height: TSizes.spaceBtwItems/2,),
-                        TBrandTitleTextWithVerifiedIcon(title: 'Genfar')
+                         Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            TProductTitleText(title: 'Paracetamol',smallSize: true,),
+                            SizedBox(height: TSizes.spaceBtwItems/2,),
+                            TBrandTitleTextWithVerifiedIcon(title: 'Genfar')
+                          ],
+                        ),
                       ],
                     ),
                   ),
+                  const Spacer(),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TProductPriceText(price: '30.00'),
+                      Flexible(child: TProductPriceText(price: '30.00')),
 
 
                     ],
