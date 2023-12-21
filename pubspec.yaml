@@ -33,6 +33,7 @@ flutter:
   uses-material-design: true
   #------LOCAL ASSETS---------#
 assets:
+  - assets/
   - assets/logos/
   - assets/icons/brands/
   - assets/images/banners/
