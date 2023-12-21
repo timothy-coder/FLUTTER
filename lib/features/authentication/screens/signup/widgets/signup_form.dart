@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_project_app/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:flutter_project_app/features/authentication/screens/signup/verify_email.dart';
 import 'package:flutter_project_app/features/authentication/screens/signup/widgets/terms_conditions_checkbox.dart';
+import 'package:flutter_project_app/utils/validators/validation.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:get/get.dart';
 import '../../../../../utils/constants/colors.dart';
@@ -15,14 +17,19 @@ class TSignUpForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller=Get.put(SignUpController());
     final dark = THelperFunctions.isDarkMode(context);
-    return Form(child: Column(
+    return Form(
+      key: controller.signupFormKey,
+      child: Column(
       children: [
         ///First & Last Name
         Row(
           children: [
             Expanded(
               child: TextFormField(
+                controller: controller.firstname,
+                validator: (value)=>TValidator.validateEmptyText('First Name', value),
                 expands: false,
                 decoration: const InputDecoration(
                   labelText: TTexts.firstName,
@@ -33,6 +40,8 @@ class TSignUpForm extends StatelessWidget {
             const SizedBox(width: TSizes.spaceBtwInputFields,),
             Expanded(
               child: TextFormField(
+                controller: controller.lastname,
+                validator: (value)=>TValidator.validateEmptyText('Last Name', value),
                 expands: false,
                 decoration: const InputDecoration(
                   labelText: TTexts.lastName,
@@ -47,6 +56,8 @@ class TSignUpForm extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwInputFields,),
         ///Username
         TextFormField(
+          controller: controller.username,
+          validator: (value)=>TValidator.validateEmptyText('UserName', value),
           expands: false,
           decoration: const InputDecoration(
             labelText: TTexts.username,
@@ -55,6 +66,8 @@ class TSignUpForm extends StatelessWidget {
         ),
         ///Email
         TextFormField(
+          controller: controller.email,
+          validator: (value)=>TValidator.validateEmail(value),
           expands: false,
           decoration: const InputDecoration(
             labelText: TTexts.email,
@@ -64,6 +77,8 @@ class TSignUpForm extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwInputFields,),
         ///Phone Number
         TextFormField(
+          controller: controller.phonenumber,
+          validator: (value)=>TValidator.validateEmptyText('Phone Number', value),
           expands: false,
           decoration: const InputDecoration(
             labelText: TTexts.phoneNo,
@@ -73,6 +88,8 @@ class TSignUpForm extends StatelessWidget {
         const SizedBox(height: TSizes.spaceBtwInputFields,),
         ///Password
         TextFormField(
+          controller: controller.password,
+          validator: (value)=>TValidator.validatePassword(value),
           obscureText: true,
           decoration: const InputDecoration(
             labelText: TTexts.password,

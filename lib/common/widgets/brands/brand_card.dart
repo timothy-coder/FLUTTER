@@ -43,7 +43,7 @@ class TBrandCard extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const TBrandTitleTextWithVerifiedIcon(title: 'Nike', brandTextSize: TextSizes.large),
+                    const TBrandTitleTextWithVerifiedIcon(title: 'Genfar', brandTextSize: TextSizes.large),
                     Text(
                       '256 products',
                       overflow: TextOverflow.ellipsis,
