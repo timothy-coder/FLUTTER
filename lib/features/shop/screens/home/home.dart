@@ -3,11 +3,13 @@ import 'package:flutter_project_app/common/widgets/custom_shapes/containers/circ
 import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_project_app/common/widgets/products/product_cards/product_card_vertical.dart';
 import 'package:flutter_project_app/common/widgets/texts/product_title_text.dart';
+import 'package:flutter_project_app/features/shop/screens/all_products/all_products.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:flutter_project_app/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:flutter_project_app/utils/constants/colors.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
@@ -64,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///  -- Heading
-                  const TSectionHeading(title: 'Popular Products'),
+                  TSectionHeading(title: 'Popular Products',onPressed: () => Get.to (() => const AllProducts())),
                   const SizedBox(height: TSizes.spaceBtwItems),
 
                   /// -- Promo Slider -- Tutorial [Section #3, Video #7]
