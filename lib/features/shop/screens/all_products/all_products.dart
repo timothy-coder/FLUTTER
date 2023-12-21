@@ -10,10 +10,10 @@ class AllProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TAppBar(title: Text('Productos Populares'),showBackArrow: true,),
+      appBar: const TAppBar(title: Text('Productos Populares'),showBackArrow: true,),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
+          padding: const EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               DropdownButtonFormField(
@@ -22,7 +22,7 @@ class AllProducts extends StatelessWidget {
                   items: [
                     'Nombre','Precio Alto','Precio Bajo','Nuevos']
                       .map((option) => DropdownMenuItem(
-                    
+
                       child: Text(option))).toList(),
 
               ),
