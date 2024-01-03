@@ -23,7 +23,7 @@ class UserReviewCard extends StatelessWidget {
               children: [
                 const CircleAvatar(backgroundImage: AssetImage(TImages.producto1)),
                 const SizedBox(width: TSizes.spaceBtwItems),
-                Text('John Doe',style: Theme.of(context).textTheme.titleLarge),
+                Text('Mauricio Julian',style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
             IconButton(onPressed: (){}, icon: const Icon(Icons.more_vert)),
@@ -39,7 +39,7 @@ class UserReviewCard extends StatelessWidget {
         ),
         const SizedBox(height: TSizes.spaceBtwItems),
         const ReadMoreText(
-            'Quiormeqweewiytiuhfashdufgierhgsjfdhadghkurhkghs',
+            'Hepatotoxicidad, toxicidad renal, alteraciones en la fórmula sanguínea, hipoglucemia y dermatitis alérgica.',
           trimLines: 2,
           trimMode: TrimMode.Line,
           trimExpandedText: 'Mostrar menos',
@@ -63,7 +63,7 @@ class UserReviewCard extends StatelessWidget {
                 ),
                 const SizedBox(height: TSizes.spaceBtwItems),
                 const ReadMoreText(
-                  'Quiormeqweewiytiuhfashdufgierhgsjfdhadghasdadsasd234215wefw34542urhkghs',
+                  'EStoy de acuerdo con lo puesto en el comentario',
                   trimLines: 2,
                   trimMode: TrimMode.Line,
                   trimExpandedText: 'Mostrar menos',

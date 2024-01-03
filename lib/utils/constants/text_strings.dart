@@ -11,7 +11,7 @@
     static const String onBoardingSubTitle3="Escoga lo mejor para usted";
 
     static const String homeAppbarTitle="Choose your product";
-    static const String homeAppbarSubTitle="Taimor";
+    static const String homeAppbarSubTitle="Timothy_Coder";
 
     static const String firstName="First Name";
     static const String lastName="Last Name";

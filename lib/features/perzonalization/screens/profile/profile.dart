@@ -5,7 +5,10 @@ import 'package:flutter_project_app/common/widgets/texts/section_heading.dart';
 import 'package:flutter_project_app/features/perzonalization/screens/profile/widgets/profile_menu.dart';
 import 'package:flutter_project_app/utils/constants/image_strings.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+
+import '../../../authentication/screens/login/login.dart';
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
 
@@ -51,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
 
               Center(
                 child: TextButton(
-                  onPressed: (){},
+                  onPressed:()=>Get.to(()=>const LoginScreen()),
                   child: const Text('Cerrar Cuenta',style: TextStyle(color: Colors.red),),
                 ),
               )

@@ -3,6 +3,7 @@ import 'package:flutter_project_app/common/widgets/appbar/appbar.dart';
 import 'package:flutter_project_app/common/widgets/icons/t_circular_icon.dart';
 import 'package:flutter_project_app/common/widgets/layouts/grid_layout.dart';
 import 'package:flutter_project_app/common/widgets/products/product_cards/product_card_vertical.dart';
+import 'package:flutter_project_app/features/shop/screens/all_products/all_products.dart';
 import 'package:flutter_project_app/features/shop/screens/home/home.dart';
 import 'package:flutter_project_app/utils/constants/sizes.dart';
 import 'package:get/get.dart';
@@ -16,7 +17,7 @@ class FavouriteScreen extends StatelessWidget {
       appBar: TAppBar(
         title: Text('Favoritos',style: Theme.of(context).textTheme.headlineMedium,),
         actions: [
-          TCircularIcon(icon: Iconsax.add, onPressed: ()=>Get.to(const HomeScreen()),),
+          TCircularIcon(icon: Iconsax.add, onPressed: ()=>Get.to(const AllProducts()),),
         ],
       ),
       body: SingleChildScrollView(

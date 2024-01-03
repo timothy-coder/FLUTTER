@@ -37,7 +37,7 @@ class ProductDetailScreen extends StatelessWidget {
                   const TSectionHeading(title: 'Descripcion',showActionButton: false),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   const ReadMoreText(
-                      'parecetmaol',
+                      'Analgésico y antipirético, inhibidor de la síntesis de prostaglandinas periférica y central por acción sobre la ciclooxigenasa',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: 'Ver mas',
@@ -51,7 +51,7 @@ class ProductDetailScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TSectionHeading(title: 'Comentarios(199)',showActionButton: false),
+                      const TSectionHeading(title: 'Comentarios(4)',showActionButton: false),
                       IconButton(onPressed: ()=>Get.to(()=>const ProductReviewScreen()), icon: const Icon(Iconsax.arrow_right_3,size: 18)),
                     ],
                   ),
